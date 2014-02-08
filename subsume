@@ -10,4 +10,4 @@ PARENT_URL=$2
 
 mkdir -p $RELATIVE_PATH
 git mv * $RELATIVE_PATH
-git pull $PARENT_URL
+git pull --strategy=recursive -Xours $PARENT_URL -m "Merge submodule $RELATIVE_PATH into $PARENT_URL."
